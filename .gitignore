@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# npm / yarn / pnpm
+npm-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+package-lock.json.*
+
+# Environment
+.env
+.env.*
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# NOTE: svg/, png/, and webp/ are generated but ARE committed — they are the
+# published artifacts that jsDelivr serves. Do not ignore them.

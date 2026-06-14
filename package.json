@@ -1,0 +1,14 @@
+{
+  "name": "personal-project-icons",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Public host for icons of private sazap10 personal projects, consumed by the homelab Flame dashboard.",
+  "scripts": {
+    "generate": "node scripts/generate.mjs"
+  },
+  "devDependencies": {
+    "lucide-static": "^0.469.0",
+    "sharp": "^0.33.5"
+  }
+}
