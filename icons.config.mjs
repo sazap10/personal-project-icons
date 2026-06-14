@@ -14,4 +14,5 @@ export default [
   { name: "holidays", glyph: "tree-palm", accent: "#0ea5e9" },
   { name: "wealth-tracker", glyph: "trending-up", accent: "#16a34a" },
   { name: "flame", glyph: "flame", accent: "#f97316" },
+  { name: "whitley-manager", glyph: "clipboard-list", accent: "#4f46e5" },
 ];
