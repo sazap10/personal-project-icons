@@ -45,6 +45,39 @@ function loadGlyph(name) {
   return inner[1].trim();
 }
 
+// Rewrites the gallery table in README.md between the icons:start/end markers.
+function updateReadme(icons) {
+  const readme = join(root, "README.md");
+  const start = "<!-- icons:start";
+  const end = "<!-- icons:end -->";
+  let md;
+  try {
+    md = readFileSync(readme, "utf8");
+  } catch {
+    return; // No README to update.
+  }
+  const startIdx = md.indexOf(start);
+  const endIdx = md.indexOf(end);
+  if (startIdx === -1 || endIdx === -1) return; // Markers missing; leave it alone.
+
+  const rows = [...icons]
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .map(
+      ({ name, glyph, accent }) =>
+        `| <img src="png/${name}.png" width="48" alt="${name}"> | \`${name}\` | \`${glyph}\` | \`${accent}\` |`,
+    )
+    .join("\n");
+
+  const table =
+    "| Icon | Service | Glyph | Accent |\n" +
+    "|:----:|---------|-------|--------|\n" +
+    rows;
+
+  const head = md.slice(0, md.indexOf("-->", startIdx) + 3);
+  const tail = md.slice(endIdx);
+  writeFileSync(readme, `${head}\n\n${table}\n\n${tail}`);
+}
+
 function render(inner, { tile, stroke }) {
   const rect = tile
     ? `\n  <rect width="${TILE}" height="${TILE}" rx="${RADIUS}" fill="${tile}"/>`
@@ -92,8 +125,9 @@ async function main() {
     }
     console.log(`✓ ${name}  (glyph: ${glyph}, accent: ${accent})`);
   }
+  updateReadme(icons);
   console.log(
-    `\nGenerated ${count} icons × 3 formats (svg/, png/, webp/) = ${count * 3} files.`,
+    `\nGenerated ${count} icons × 3 formats (svg/, png/, webp/) = ${count * 3} files; updated README gallery.`,
   );
 }
 

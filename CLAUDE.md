@@ -65,7 +65,9 @@ webp/<service>*.webp       WebP raster of each variant (256px, transparent)
   the coloured-variant tile colour. **Use Lucide glyphs only** so the set stays a
   cohesive family; pick the blunter metaphor (legible at ~48px).
 - `scripts/generate.mjs` — composes the glyph-on-tile and emits the three SVG
-  variants. Pulls glyphs from the `lucide-static` dev dependency.
+  variants (then rasterizes to PNG/WebP). Pulls glyphs from the `lucide-static`
+  dev dependency. Also rewrites the `README.md` icon gallery between the
+  `<!-- icons:start -->` / `<!-- icons:end -->` markers — don't hand-edit that table.
 
 ## Adding or changing an icon
 
