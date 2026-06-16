@@ -18,6 +18,7 @@ legible at dashboard size (~48px).
 | <img src="png/holidays.png" width="48" alt="holidays"> | `holidays` | `tree-palm` | `#0ea5e9` |
 | <img src="png/wealth-tracker.png" width="48" alt="wealth-tracker"> | `wealth-tracker` | `trending-up` | `#16a34a` |
 | <img src="png/whitley-manager.png" width="48" alt="whitley-manager"> | `whitley-manager` | `clipboard-list` | `#4f46e5` |
+| <img src="png/world-cup-dashboard.png" width="48" alt="world-cup-dashboard"> | `world-cup-dashboard` | `trophy` | `#eab308` |
 
 <!-- icons:end -->
 
