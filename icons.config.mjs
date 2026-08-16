@@ -16,4 +16,5 @@ export default [
   { name: "flame", glyph: "flame", accent: "#f97316" },
   { name: "whitley-manager", glyph: "clipboard-list", accent: "#4f46e5" },
   { name: "world-cup-dashboard", glyph: "trophy", accent: "#eab308" },
+  { name: "hindi-learning", glyph: "languages", accent: "#e11d48" },
 ];
