@@ -17,4 +17,5 @@ export default [
   { name: "whitley-manager", glyph: "clipboard-list", accent: "#4f46e5" },
   { name: "world-cup-dashboard", glyph: "trophy", accent: "#eab308" },
   { name: "hindi-learning", glyph: "languages", accent: "#e11d48" },
+  { name: "personal-knowledge", glyph: "book-open", accent: "#1d4aac" },
 ];
